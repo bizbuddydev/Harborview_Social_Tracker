@@ -108,19 +108,19 @@ def main():
         if st.button("All Time"):
             filtered_data = data
     
-    with col3:
+    with col4:
         if st.button("Top 10 by Reach"):
             filtered_data = top_10_by_column(data, "reach")
     
-    with col4:
+    with col5:
         if st.button("Top 10 by Likes"):
             filtered_data = top_10_by_column(data, "like_count")
     
-    with col5:
+    with col6:
         if st.button("Top 10 by Like Rate"):
             filtered_data = top_10_by_column(data, "Like Rate")
     
-    with col6:
+    with col7:
         if st.button("Top 10 by Comments"):
             filtered_data = top_10_by_column(data, "comments_count")
     
