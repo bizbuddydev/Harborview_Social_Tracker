@@ -105,8 +105,8 @@ def main():
             filtered_data = filter_last_6_months(data)
 
     with col3:
-    if st.button("All Time"):
-        filtered_data = data
+        if st.button("All Time"):
+            filtered_data = data
     
     with col3:
         if st.button("Top 10 by Reach"):
