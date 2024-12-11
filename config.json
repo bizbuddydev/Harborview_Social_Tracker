@@ -1,6 +1,5 @@
 {
-  "query": "SELECT * FROM your_table",
-  "account": "table_name_here",
-  "datasetid": "database_name_here",
-  "tableid": "custom_value"
+  "account_name": "Lundy's Ice Cream",
+  "datasetid": "ig_data",
+  "tableid": "lundys_postdata"
 }
