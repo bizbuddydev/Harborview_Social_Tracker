@@ -3,9 +3,17 @@ from google.oauth2 import service_account
 from google.cloud import bigquery
 import pandas as pd
 from datetime import date, timedelta
-import config
+import json
 
 st.set_page_config(page_title="Social Overview", layout="wide")
+
+# Load the configuration file
+def load_config(file_path="config.json"):
+    with open(file_path, "r") as f:
+        return json.load(f)
+
+# Load the account configuration
+config = load_config()
 
 # Load credentials and project ID from st.secrets
 credentials = service_account.Credentials.from_service_account_info(
