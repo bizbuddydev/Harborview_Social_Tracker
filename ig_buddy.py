@@ -94,7 +94,7 @@ def main():
 
     # Add buttons for filtering options
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
-    col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
+    col1, col2, col3, col4, col5, col6, col7 = st.columns([1, 1, 1, 1, 1, 1, 1])
     
     with col1:
         if st.button("Last 30 Days"):
@@ -103,6 +103,10 @@ def main():
     with col2:
         if st.button("Last 6 Months"):
             filtered_data = filter_last_6_months(data)
+
+    with col3:
+    if st.button("All Time"):
+        filtered_data = data
     
     with col3:
         if st.button("Top 10 by Reach"):
