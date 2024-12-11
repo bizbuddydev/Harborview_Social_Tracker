@@ -31,10 +31,15 @@ def filter_last_6_months(df):
 def top_10_by_column(df, column):
     return df.sort_values(by=column, ascending=False).head(10)
 
+# Use the variables in your app
+account_name = config["account_name"]
+datasetid = config["database_name"]
+tableid = config["custom_variable"]
+
 ### Get data ###
-query = """
+query = f"""
 SELECT *
-FROM `bizbuddydemo-v1.ig_data.lundys_postdata`
+FROM `bizbuddydemo-v1.{datasetid}.{tableid}`
 ORDER BY created_time DESC
 """
 
@@ -67,7 +72,7 @@ def main():
     st.markdown('<div class="centered-title">Social Buddy - Instagram</div>', unsafe_allow_html=True)
     
     # Centered header
-    st.markdown('<div class="centered-header">Lundy\'s Ice Cream</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="centered-header">{account_name}</div>', unsafe_allow_html=True)
 
     # Add buttons for filtering options
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
