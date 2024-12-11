@@ -74,6 +74,12 @@ def main():
             font-size: 24px;
             margin-bottom: 20px;
         }
+        .left-header {
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
     </style>
     """, unsafe_allow_html=True)
     
@@ -82,6 +88,9 @@ def main():
     
     # Centered header
     st.markdown(f'<div class="centered-header">{account_name}</div>', unsafe_allow_html=True)
+
+    # Centered header
+    st.markdown(f'<div class="left-header">Filter Posts</div>', unsafe_allow_html=True)
 
     # Add buttons for filtering options
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
