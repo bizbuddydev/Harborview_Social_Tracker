@@ -42,8 +42,8 @@ def top_10_by_column(df, column):
 
 # Use the variables in your app
 account_name = config["account_name"]
-datasetid = config["database_name"]
-tableid = config["custom_variable"]
+datasetid = config["datasetid"]
+tableid = config["tableid"]
 
 ### Get data ###
 query = f"""
